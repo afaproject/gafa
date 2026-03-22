@@ -59,7 +59,7 @@ def cached_scrape_multiple(filtered: list, threads: int):
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="Robin: AI-Powered Dark Web OSINT Tool",
+    page_title="GAFA: AI-Powered Dark Web OSINT Tool",
     page_icon="🕵️‍♂️",
     initial_sidebar_state="expanded",
 )
@@ -91,10 +91,10 @@ st.markdown(
 
 
 # Sidebar
-st.sidebar.title("Robin")
+st.sidebar.title("GAFA")
 st.sidebar.text("AI-Powered Dark Web OSINT Tool")
 st.sidebar.markdown(
-    """Made by [Apurv Singh Gautam](https://www.linkedin.com/in/apurvsinghgautam/)"""
+    """Made by [DigiTem](https://in.linkedin.com/company/tech-digitem)"""
 )
 st.sidebar.subheader("Settings")
 def _env_is_set(value) -> bool:
@@ -114,7 +114,7 @@ if not model_options:
     st.sidebar.error(
         "⛔ **No LLM models available.**\n\n"
         "No API keys or local providers are configured. "
-        "Set at least one in your `.env` file and restart Robin.\n\n"
+        "Set at least one in your `.env` file and restart GAFA.\n\n"
         "See **Provider Configuration** below for details."
     )
 
@@ -236,7 +236,7 @@ if st.sidebar.button("🔍 Check Search Engines", use_container_width=True):
 # Main UI - logo and input
 _, logo_col, _ = st.columns(3)
 with logo_col:
-    st.image(".github/assets/robin_logo.png", width=200)
+    st.image(".github/assets/gafa.png", width=200)
 
 # Display text box and button
 with st.form("search_form", clear_on_submit=True):
